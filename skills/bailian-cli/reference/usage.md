@@ -7,11 +7,12 @@ Index: [index.md](index.md)
 
 ## Commands in this group
 
-| Command             | Description                                                                                |
-| ------------------- | ------------------------------------------------------------------------------------------ |
-| `bl usage free`     | Query free-tier quota for models (all models if --model is omitted)                        |
-| `bl usage freetier` | Enable or disable auto-stop for free-tier models. Enables by default; use --off to disable |
-| `bl usage stats`    | Query model usage statistics                                                               |
+| Command              | Description                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| `bl usage free`      | Query free-tier quota for models (all models if --model is omitted)                        |
+| `bl usage freetier`  | Enable or disable auto-stop for free-tier models. Enables by default; use --off to disable |
+| `bl usage stats`     | Query model usage statistics                                                               |
+| `bl usage tokenplan` | Query personal Token Plan usage (monthly window)                                           |
 
 ## Command details
 
@@ -158,4 +159,34 @@ bl usage stats --type Text --days 14
 
 ```bash
 bl usage stats --output json
+```
+
+### `bl usage tokenplan`
+
+| Field           | Value                                            |
+| --------------- | ------------------------------------------------ |
+| **Name**        | `usage tokenplan`                                |
+| **Description** | Query personal Token Plan usage (monthly window) |
+| **Usage**       | `bl usage tokenplan [flags]`                     |
+
+#### Options
+
+| Flag                           | Type   | Required | Description                           |
+| ------------------------------ | ------ | -------- | ------------------------------------- |
+| `--console-region <region>`    | string | no       | Console region                        |
+| `--console-site <site>`        | string | no       | Console site: domestic, international |
+| `--console-switch-agent <uid>` | number | no       | Switch agent UID                      |
+
+#### Examples
+
+```bash
+bl usage tokenplan
+```
+
+```bash
+bl usage tokenplan --output json
+```
+
+```bash
+bl usage tokenplan --console-site international
 ```

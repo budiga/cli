@@ -38,7 +38,7 @@ _专为 AI Agent 打造，每个命令均可作为结构化工具调用。_
 - **MCP 集成** — 统一调度百炼 MCP 服务：列出服务、查看工具、直接在终端调用任意工具
 - **联网搜索** — 实时互联网信息检索，提升回答准确性及时效性
 - **模型推荐** — 描述你的场景，智能推荐最适合的模型；支持限定范围搜索、模型对比和替代发现
-- **控制台能力** — 浏览百炼应用（`app list`），查询模型免费额度（`usage free`），查看模型用量统计（`usage stats`），管理业务空间（`workspace list`），管理限流与提额（`quota list/request/check/history`）
+- **控制台能力** — 浏览百炼应用（`app list`），查询模型免费额度（`usage free`），查看模型用量统计（`usage stats`），查看个人版 Token Plan 用量（`usage tokenplan`），管理业务空间（`workspace list`），管理限流与提额（`quota list/request/check/history`）
 - **本地文件自动上传** — 所有 URL 参数同时支持本地路径，免费临时存储 48 小时
 
 ## 示例:一句话生成一部电影短片
@@ -113,6 +113,7 @@ bl usage free --expiring 30                           # 30 天内过期的额度
 bl usage free --sort remaining                        # 按剩余百分比升序排列
 bl usage stats --workspace-id <id>                    # 指定空间的用量概览
 bl usage stats --model qwen-turbo --workspace-id <id> # 指定模型用量
+bl usage tokenplan                                    # 个人版 Token Plan 月用量
 bl workspace list                                     # 列出所有业务空间
 
 # 限流管理与提额
@@ -145,7 +146,7 @@ bl text chat --api-key sk-xxxxx --message "你好"
 
 ### 控制台登录（OAuth）
 
-控制台能力命令（`app list`、`usage free`、`usage stats`、`workspace list`、`quota list/request/check/history`）需要使用此登录方式。打开浏览器跳转百炼控制台完成登录。
+控制台能力命令（`app list`、`usage free`、`usage stats`、`usage tokenplan`、`workspace list`、`quota list/request/check/history`）需要使用此登录方式。打开浏览器跳转百炼控制台完成登录。
 
 ```bash
 bl auth login --console

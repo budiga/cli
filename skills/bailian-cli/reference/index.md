@@ -49,6 +49,7 @@ Use this index for the full quick index and global flags.
 | `bl usage free`            | Query free-tier quota for models (all models if --model is omitted)                                   | [usage.md](usage.md)         |
 | `bl usage freetier`        | Enable or disable auto-stop for free-tier models. Enables by default; use --off to disable            | [usage.md](usage.md)         |
 | `bl usage stats`           | Query model usage statistics                                                                          | [usage.md](usage.md)         |
+| `bl usage tokenplan`       | Query personal Token Plan usage (monthly window)                                                      | [usage.md](usage.md)         |
 | `bl video download`        | Download a completed video by task ID                                                                 | [video.md](video.md)         |
 | `bl video edit`            | Edit a video with happyhorse-1.0-video-edit (style transfer, object replacement, etc.)                | [video.md](video.md)         |
 | `bl video generate`        | Generate a video from text or image (happyhorse-1.1-t2v / happyhorse-1.1-i2v / wan2.6-t2v)            | [video.md](video.md)         |
@@ -78,7 +79,7 @@ Use this index for the full quick index and global flags.
 | `speech`    | `recognize`, `synthesize`                                                    | [speech.md](speech.md)       |
 | `text`      | `chat`                                                                       | [text.md](text.md)           |
 | `update`    | `(root)`                                                                     | [update.md](update.md)       |
-| `usage`     | `free`, `freetier`, `stats`                                                  | [usage.md](usage.md)         |
+| `usage`     | `free`, `freetier`, `stats`, `tokenplan`                                     | [usage.md](usage.md)         |
 | `video`     | `download`, `edit`, `generate`, `ref`, `task get`                            | [video.md](video.md)         |
 | `vision`    | `describe`                                                                   | [vision.md](vision.md)       |
 | `workspace` | `list`                                                                       | [workspace.md](workspace.md) |

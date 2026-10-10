@@ -38,7 +38,7 @@ Equip your AI Agent out-of-the-box with these capabilities, composable across co
 - **MCP integration** — Orchestrate Bailian MCP servers: list services, inspect tools, and invoke any tool directly from the terminal
 - **Web search** — Real-time internet retrieval for up-to-date, accurate answers
 - **Model recommendation** — Describe your scenario and get best-fit model suggestions; supports scoped search, model comparison, and alternative discovery
-- **Console capabilities** — Browse Bailian apps (`app list`), check free-tier quota (`usage free`), view model usage statistics (`usage stats`), manage workspaces (`workspace list`), and manage rate limits (`quota list/request/check/history`)
+- **Console capabilities** — Browse Bailian apps (`app list`), check free-tier quota (`usage free`), view model usage statistics (`usage stats`), check personal Token Plan usage (`usage tokenplan`), manage workspaces (`workspace list`), and manage rate limits (`quota list/request/check/history`)
 - **Local file auto-upload** — Every URL parameter accepts a local path; uploaded to free temp storage with 48-hour validity
 
 ## Showcase: One-Sentence Cinematic Video
@@ -118,6 +118,7 @@ bl usage free --expiring 30                           # Quotas expiring within 3
 bl usage free --sort remaining                        # Sort by remaining % ascending
 bl usage stats --workspace-id <id>                    # Usage overview for a workspace
 bl usage stats --model qwen-turbo --workspace-id <id> # Per-model usage
+bl usage tokenplan                                    # Personal Token Plan monthly usage
 bl workspace list                                     # List all workspaces
 
 # Rate limit management
@@ -150,7 +151,7 @@ bl text chat --api-key sk-xxxxx --message "Hello"
 
 ### Console Login (OAuth)
 
-Required for console capability commands (`app list`, `usage free`, `usage stats`, `workspace list`, `quota list/request/check/history`). Opens the Bailian console in your browser to sign in.
+Required for console capability commands (`app list`, `usage free`, `usage stats`, `usage tokenplan`, `workspace list`, `quota list/request/check/history`). Opens the Bailian console in your browser to sign in.
 
 ```bash
 bl auth login --console

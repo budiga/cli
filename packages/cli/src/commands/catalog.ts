@@ -38,6 +38,7 @@ import consoleCall from "./console/call.ts";
 import usageFree from "./usage/free.ts";
 import usageFreetier from "./usage/freetier.ts";
 import usageStats from "./usage/stats.ts";
+import usageTokenplan from "./usage/tokenplan.ts";
 import pipelineRun from "./pipeline/run.ts";
 import pipelineValidate from "./pipeline/validate.ts";
 import advisorRecommend from "./advisor/recommend.ts";
@@ -83,6 +84,7 @@ export const commands: Record<string, Command> = {
   "usage free": usageFree,
   "usage freetier": usageFreetier,
   "usage stats": usageStats,
+  "usage tokenplan": usageTokenplan,
   "pipeline run": pipelineRun,
   "pipeline validate": pipelineValidate,
   "config show": configShow,
